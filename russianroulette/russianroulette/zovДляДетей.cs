@@ -1,14 +1,14 @@
-public class GOAL {
-    public static void ZOV () {
+public class GOALchild {
+    public static void ZOV4ik () {
 
         DLS.Greet();
-        DLS.Converter(out double money);
+        DLS.Converter4Child(out double money);
         
         Console.WriteLine("Введите имя игрока: ");
         string gamer = Console.ReadLine()!;
         if (gamer == "БОТ НИКАНОР") {
-            Console.WriteLine("ТАК НЕ ПОЙДЕТ!Будешь дауном.");
-            gamer="Даун";
+            Console.WriteLine("ТАК НЕ ПОЙДЕТ!Будешь сынком.");
+            gamer="Сынок";
         }
         string bot = "БОТ НИКАНОР";
         
@@ -35,11 +35,11 @@ public class GOAL {
 
             }
             else{
-                Console.WriteLine("Выберите действие:\n 1-Выстрел \n 2-Прокрут барабана \n 3-Съебаться в ужасе (бояться) \n 4-Выстрелить в оппонента (ты боишься?)");
+                Console.WriteLine("Выберите действие:\n 1-Выстрел \n 2-Прокрут барабана \n 3-Сбежать в ужасе (бояться) \n 4-Выстрелить в оппонента (ты боишься?)");
                 choice = int.Parse(Console.ReadLine()!);
             }
             while(choice > 4 || choice < 1) {
-                Console.WriteLine("Тупорылый аутист выбери норм число");
+                Console.WriteLine("Пожалуйста, выбери доступное число!");
                 choice = int.Parse(Console.ReadLine()!);
             };
                 switch(choice){
@@ -60,13 +60,13 @@ public class GOAL {
                  Console.WriteLine("Ствол у виска.Выстрел!");
                     if (Bullet == Shoot) {
                             StillAlive = false;
-                            Console.WriteLine($"{player} застрелился");
+                            Console.WriteLine($"{player} облился");
                             if (loser == gamer) {
                                 winner = bot;
                             } else {
                                 winner = gamer;
                             }
-                            Console.WriteLine($"{winner} одержал победу над {loser} и получает выигрыш в размере {money - (money * 14.88/100):f2} руб.");
+                            Console.WriteLine($"{winner} одержал победу над {loser} и получает выигрыш в размере {money - (money * 14.88/100):f2} конфет.");
                     } else Console.WriteLine($"{player} остался жив");
                 }
                     Shoot++;
@@ -91,24 +91,24 @@ public class GOAL {
                             } else {
                                 winner = gamer;
                             }
-                            Console.WriteLine($"{loser} был застрелен в спину из карманного Fokker-Leimberger");
+                            Console.WriteLine($"{loser} был застрелен в спину из водного пистолета");
                             StillAlive = false;
-                            Console.WriteLine($"{winner} одержал победу над {loser} и получает выигрыш в размере {money - (money * 14.88/100):f2} руб.");
+                            Console.WriteLine($"{winner} одержал победу над {loser} и получает выигрыш в размере {money - (money * 14.88/100):f2} конфет.");
                         } else 
-                            Console.WriteLine($"{loser} успешно сбежал и проебал деньги");          
+                            Console.WriteLine($"{loser} успешно сбежал и остался без конфет");          
                 }
                 void KillBastard() {
                     if (Bullet != Shoot) {
                         StillAlive = false;
-                        Console.WriteLine(".....вам раскрошили еблище");
+                        Console.WriteLine(".....с пелёнок уже крыса");
                         if (loser == gamer) {
                                 winner = bot;
                             } else {
                                 winner = gamer;
                             }
-                        Console.WriteLine($"{winner} одержал победу над {loser} и получает выигрыш в размере {money - (money * 14.88/100):f2} руб.");
+                        Console.WriteLine($"{winner} одержал победу над {loser} и получает выигрыш в размере {money - (money * 14.88/100):f2} конфет.");
                     } else {
-                        Console.WriteLine($"Успех! {loser} убил оппонента и теперь ему запрещен вход в данное заведение! У него конфисковали все деньги! Даун!");
+                        Console.WriteLine($"Успех! {loser} облил водой оппонента и теперь ему запрещен вход в детский сад! У него конфисковали все конфеты!");
                         StillAlive = false;
                     }
                 }

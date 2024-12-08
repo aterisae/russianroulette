@@ -25,7 +25,10 @@ public class GOIDA {
             
             Console.WriteLine("Выберите действие:\n 1-Выстрел \n 2-Прокрут барабана \n 3-Съебаться в ужасе (бояться) \n 4-Выстрелить в оппонента (ты боишься?)");
             int choice = int.Parse(Console.ReadLine()!);
-            if(choice > 4 || choice < 1) Console.WriteLine("Тупорылый аутист выбери норм число");
+             while(choice > 4 || choice < 1) {
+                Console.WriteLine("Тупорылый аутист выбери норм число");
+                choice = int.Parse(Console.ReadLine()!);
+            };
                 switch(choice){
                     case 1:
                     Shooting();
